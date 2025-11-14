@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2024-11-14
+### Added
+- Setup PayloadCMS with SQLite database
+- About Me CMS collection (singleton) with personal info
+- About Me page with Experience and skills sections
+- Export cms data to json method
+- Icons for dark and light mode
+- Responsive layout for About page
+- useAbout composable for data management
+- useTheme composable for theme management
+
 ## [0.2.0] - 2024-11-12
 ### Added
 - Complete design token system with CSS custom properties (tokens.scss)

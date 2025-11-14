@@ -1,0 +1,168 @@
+{
+  "bio": "",
+  "socialLinks": [
+    {
+      "id": "6914bcd87319e7a293a7ae3a",
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/sidixhoxhaj/",
+      "icon": "linkedin",
+      "showLabel": true
+    },
+    {
+      "id": "6914bcef7319e7a293a7ae3c",
+      "platform": "GitHub",
+      "url": "https://github.com/sidixhoxhaj",
+      "icon": "github",
+      "showLabel": false
+    },
+    {
+      "id": "69172f850569ef5d5a94bab5",
+      "platform": "X",
+      "url": "https://x.com/sidi_io",
+      "icon": "x",
+      "showLabel": false
+    }
+  ],
+  "experiences": [
+    {
+      "company": "HotelSpecials",
+      "position": "Senior Frontend Developer",
+      "startDate": "2021-11-01T12:00:00.000Z",
+      "endDate": null,
+      "responsibilities": "Senior Frontend Developer on a multi-country booking platform serving 5M+ monthly users across 8 European markets. Led initiatives including design system development across 4 platforms, frontend architecture for major projects (20% margin increase), and A/B testing programs that improved conversions by 13%."
+    },
+    {
+      "company": "Ritech International AG",
+      "position": "Frontend Developer",
+      "startDate": "2021-03-01T12:00:00.000Z",
+      "endDate": "2021-11-01T12:00:00.000Z",
+      "responsibilities": "Frontend Developer building e-commerce solutions for US clients, including a $4M+ education platform and fashion e-commerce with 1M+ users. Specialized in Shopify Plus development, custom React applications, and integrating automated workflows using Zapier, Klaviyo, and third-party APIs."
+    },
+    {
+      "company": "Optima Italia",
+      "position": "Frontend Developer",
+      "startDate": "2018-10-01T12:00:00.000Z",
+      "endDate": "2021-03-01T12:00:00.000Z",
+      "responsibilities": "Frontend Developer building web platforms for a major telecom and energy company with 600K+ monthly users. Created a design system with 40+ components and design tokens that became the company-wide standard for React.js development across CRM dashboards and microservices."
+    },
+    {
+      "company": "MEDIAWeb Group",
+      "position": "Frontend Developer",
+      "startDate": "2016-10-01T12:00:00.000Z",
+      "endDate": "2018-10-01T12:00:00.000Z",
+      "responsibilities": "Frontend Developer at a digital agency building custom websites for clients across Albania and Switzerland. Built 50+ websites using WordPress, PrestaShop, and Shopify, including a year-long Chamber of Commerce project, and was promoted to team lead managing 4 developers in final months."
+    }
+  ],
+  "skills": [
+    {
+      "id": "6914be148059e609a4ef975f",
+      "name": "JavaScript",
+      "icon": "javascript"
+    },
+    {
+      "id": "6914be048059e609a4ef975d",
+      "name": "Typescript",
+      "icon": "typescript"
+    },
+    {
+      "id": "69172f2e0569ef5d5a94baad",
+      "name": "Vue.js",
+      "icon": "vuejs"
+    },
+    {
+      "id": "69172f380569ef5d5a94baaf",
+      "name": "React.js",
+      "icon": "react"
+    },
+    {
+      "id": "69172f3e0569ef5d5a94bab1",
+      "name": "Next.js",
+      "icon": "nextjs"
+    },
+    {
+      "id": "69172f470569ef5d5a94bab3",
+      "name": "Git",
+      "icon": "git"
+    },
+    {
+      "id": "69172f9d0569ef5d5a94bab7",
+      "name": "jQuery",
+      "icon": "jquery"
+    },
+    {
+      "id": "691730880569ef5d5a94babb",
+      "name": "HTML5",
+      "icon": "html5"
+    },
+    {
+      "id": "6917308f0569ef5d5a94babd",
+      "name": "CSS3",
+      "icon": "css3"
+    },
+    {
+      "id": "691730f90569ef5d5a94bacb",
+      "name": "Tailwind",
+      "icon": "tailwind"
+    },
+    {
+      "id": "691730930569ef5d5a94babf",
+      "name": "SCSS",
+      "icon": "saas"
+    },
+    {
+      "id": "691730a00569ef5d5a94bac1",
+      "name": "Supabase",
+      "icon": "supabase"
+    },
+    {
+      "id": "691730c40569ef5d5a94bac3",
+      "name": "Firebase",
+      "icon": "firebase"
+    },
+    {
+      "id": "691730cb0569ef5d5a94bac5",
+      "name": "Playwright",
+      "icon": "playwright"
+    },
+    {
+      "id": "691730db0569ef5d5a94bac7",
+      "name": "Jest",
+      "icon": "jest"
+    },
+    {
+      "id": "691730e10569ef5d5a94bac9",
+      "name": "Google Tag Manager",
+      "icon": "google-tag-manager"
+    },
+    {
+      "id": "6917311e0569ef5d5a94bacd",
+      "name": "Shopify",
+      "icon": "shopify"
+    },
+    {
+      "id": "6917312a0569ef5d5a94bacf",
+      "name": "Wordpress",
+      "icon": "wordpress"
+    },
+    {
+      "id": "691731300569ef5d5a94bad1",
+      "name": "WooCommerce",
+      "icon": "woo-commerce"
+    },
+    {
+      "id": "691731480569ef5d5a94bad3",
+      "name": "Adobe Illustrator",
+      "icon": "adobe-illustrator"
+    },
+    {
+      "id": "691731540569ef5d5a94bad5",
+      "name": "Adobe Photoshop",
+      "icon": "adobe-photoshop"
+    },
+    {
+      "id": "6917315d0569ef5d5a94bad7",
+      "name": "Figma",
+      "icon": "figma"
+    }
+  ]
+}

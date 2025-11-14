@@ -1,27 +1,23 @@
 <template>
-  <button class="theme-toggle" @click="toggleTheme" aria-label="Toggle theme">
+  <button 
+    v-if="currentTheme" 
+    class="theme-toggle" 
+    @click="toggleTheme" 
+    aria-label="Toggle theme"
+  >
     <Icon :name="currentTheme === 'light' ? 'sun' : 'moon'" />
   </button>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import Icon from './Icon.vue';
+import { useTheme } from '@/composables/useTheme';
 
-const currentTheme = ref('light');
-
-const toggleTheme = () => {
-  currentTheme.value = currentTheme.value === 'light' ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', currentTheme.value);
-  localStorage.setItem('theme', currentTheme.value);
-};
+const { currentTheme, toggleTheme, initTheme } = useTheme();
 
 onMounted(() => {
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  currentTheme.value = saved || (prefersDark ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', currentTheme.value);
+  initTheme();
 });
 </script>
 

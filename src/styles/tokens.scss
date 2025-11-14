@@ -3,13 +3,16 @@
   --color-bg-secondary: #F5F5F5;
   --color-text-primary: #000000;
   --color-text-secondary: #666666;
+  --color-text-inverse: #FFFFFF;
   --color-border: #E5E5E5;
   
-  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-base: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-weight-thin: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-black: 900;
+  --font-weight-extrabold: 800;
   
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -30,6 +33,7 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
   
   --border-radius-sm: 8px;
   --border-radius-md: 10px;
@@ -50,6 +54,7 @@
   --color-bg-primary: #000000;
   --color-bg-secondary: #1A1A1A;
   --color-text-primary: #FFFFFF;
+  --color-text-inverse: #000000;
   --color-text-secondary: #999999;
   --color-border: #333333;
   

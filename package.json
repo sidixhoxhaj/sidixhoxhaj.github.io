@@ -6,6 +6,8 @@
   "scripts": {
     "sprite": "node scripts/generate-sprite.js",
     "dev": "npm run sprite && vite",
+    "dev:cms": "cd cms && next dev -p 3000",
+    "export:cms": "tsx scripts/export-cms-data.ts",
     "build": "npm run sprite && vite build",
     "preview": "vite preview"
   },
@@ -17,10 +19,22 @@
   "author": "Sidi Xhoxhaj",
   "license": "MIT",
   "dependencies": {
+    "@payloadcms/db-sqlite": "^3.63.0",
+    "@payloadcms/next": "^3.63.0",
+    "@payloadcms/richtext-lexical": "^3.63.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "next": "^15.5.6",
+    "payload": "^3.63.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsx": "^4.20.6",
     "vue": "^3.5.24",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
+    "@types/express": "^5.0.5",
     "@vitejs/plugin-vue": "^5.2.4",
     "sass": "^1.94.0",
     "vite": "^5.4.21"

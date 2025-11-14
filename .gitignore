@@ -2,8 +2,21 @@ node_modules/
 dist/
 .DS_Store
 *.log
+.env
 
 .vscode/*
 .github/*
 
 old-site/
+
+# PayloadCMS
+cms/database.db
+cms/database.db-shm
+cms/database.db-wal
+cms/payload-types.ts
+cms/.next/
+cms/app/(payload)
+
+# Next.js
+.next/
+next-env.d.ts
