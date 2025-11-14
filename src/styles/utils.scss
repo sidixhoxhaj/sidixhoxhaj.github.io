@@ -87,14 +87,22 @@
     transform: translateY(0);
   }
 
-  &__small {
+  &__transparent {
+    background: transparent;
+    border: none;
+
+    &:hover {
+      color: var(--color-text-secondary)
+    }
+  }
+
+  &--small {
     padding: var(--spacing-xs) var(--spacing-sm);
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    border: 2px solid var(--color-border);
-    border-radius: var(--border-radius-lg);
-    background: transparent;
-    color: var(--color-text-primary);
+  }
+
+  &--inline {
+    padding: 0;
   }
 }
 

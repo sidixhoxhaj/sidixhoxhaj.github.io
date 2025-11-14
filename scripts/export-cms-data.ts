@@ -60,6 +60,74 @@ const exportData = async () => {
       path.join(dataDir, 'about.json'),
       JSON.stringify(transformedData, null, 2)
     );
+    console.log('✓ About data exported');
+
+    // Export Portfolio data
+    console.log('Fetching Portfolio data...');
+    const portfolioData = await payload.find({
+      collection: 'portfolio',
+      limit: 100,
+    });
+
+    // Create media directory in public folder
+    const mediaDir = path.join(__dirname, '../public/media');
+    if (!fs.existsSync(mediaDir)) {
+      fs.mkdirSync(mediaDir, { recursive: true });
+    }
+
+    // Helper to copy media file and return public path
+    const copyMediaFile = (url: string | null): string | null => {
+      if (!url) return null;
+
+      // Extract filename from URL (e.g., /api/media/file/image.png -> image.png)
+      const filename = url.split('/').pop();
+      if (!filename) return null;
+
+      // Source path in CMS uploads
+      const sourcePath = path.join(__dirname, '../cms/media', decodeURIComponent(filename));
+      const destPath = path.join(mediaDir, decodeURIComponent(filename));
+
+      try {
+        if (fs.existsSync(sourcePath)) {
+          fs.copyFileSync(sourcePath, destPath);
+          console.log(`  ✓ Copied: ${filename}`);
+          return `/media/${filename}`;
+        } else {
+          console.warn(`  ⚠ File not found: ${sourcePath}`);
+          return null;
+        }
+      } catch (error) {
+        console.error(`  ✗ Error copying ${filename}:`, error);
+        return null;
+      }
+    };
+
+    const transformedPortfolio = portfolioData.docs.map((item: any) => {
+      const mainImageUrl = typeof item.mainImage === 'object' ? item.mainImage?.url : item.mainImage;
+
+      return {
+        id: item.id,
+        title: item.title,
+        slug: item.slug,
+        description: item.description,
+        content: lexicalToPlainText(item.content),
+        mainImage: copyMediaFile(mainImageUrl),
+        galleryImages: (item.galleryImages || []).map((img: any) => {
+          const imgUrl = typeof img.image === 'object' ? img.image?.url : img.image;
+          return copyMediaFile(imgUrl);
+        }).filter(Boolean),
+        technologies: (item.technologies || []).map((t: any) => t.tech),
+        highlights: (item.highlights || []).map((h: any) => h.achievement),
+        liveUrl: item.liveUrl,
+        githubUrl: item.githubUrl,
+      };
+    });
+
+    fs.writeFileSync(
+      path.join(dataDir, 'portfolio.json'),
+      JSON.stringify(transformedPortfolio, null, 2)
+    );
+    console.log('✓ Portfolio data exported');
 
     console.log('✓ Export complete!');
     clearTimeout(timeout);

@@ -26,7 +26,7 @@
                   :href="link.url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="['btn', 'btn__small', { 'btn__with-label': link.showLabel }]"
+                  :class="['btn', 'btn--small', { 'btn__with-label': link.showLabel }]"
                   :aria-label="link.platform"
                 >
                   <Icon :name="link.icon" :width="18" :height="18" />

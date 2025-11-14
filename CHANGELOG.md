@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2024-11-14
+### Added
+- Portfolio CMS collection with comprehensive fields
+- Portfolio listing page with grid layout
+- Portfolio card component
+- Technology filter functionality
+- Sort options for portfolio items
+- Featured portfolio item support
+- usePortfolio composable for data management
+
 ## [0.3.0] - 2024-11-14
 ### Added
 - Setup PayloadCMS with SQLite database

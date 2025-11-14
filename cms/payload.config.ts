@@ -6,6 +6,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { About } from './globals/About';
 import { Media } from './collections/Media';
+import { Portfolio } from './collections/Portfolio';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,6 +27,7 @@ export default buildConfig({
       ],
     },
     Media,
+    Portfolio,
   ],
   globals: [
     About,
@@ -33,7 +35,7 @@ export default buildConfig({
   editor: lexicalEditor({}),
   db: sqliteAdapter({
     client: {
-      url: process.env.DATABASE_URL || `file:${path.resolve(__dirname, '../database.db')}`,
+      url: process.env.DATABASE_URL || `file:${path.resolve(__dirname, './database.db')}`,
     },
   }),
   secret: process.env.PAYLOAD_SECRET || 'your-secret-key-here',
