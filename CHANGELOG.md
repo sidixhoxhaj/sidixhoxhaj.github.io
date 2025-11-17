@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2024-11-17
+### Added
+- Header component with navigation and theme switcher
+  - Logo/brand name with link to home
+  - Navigation menu (About, Portfolio, Blog)
+  - Active route highlighting with underline indicator
+  - Theme switcher integration in header
+- Footer component with social links and copyright
+  - Quick links navigation
+  - Social media links (GitHub, LinkedIn)
+  - Dynamic copyright year
+  - Responsive grid layout
+- DefaultLayout component for consistent page structure
+  - Fixed header with proper spacing
+  - Flexible main content area
+  - Footer at bottom of page
+- Mobile navigation menu
+  - Hamburger menu toggle
+  - Slide-out navigation drawer
+  - Overlay for closing menu
+  - Body scroll lock when menu is open
+- Accessibility improvements
+  - Skip to content link for keyboard navigation
+  - Proper ARIA labels for interactive elements
+  - Semantic HTML structure
+- Smooth scroll behavior across entire site
+- Global content styles moved to reset.scss
+
+### Changed
+- App.vue now uses DefaultLayout wrapper
+- All pages now include Header and Footer automatically
+
 ## [0.5.0] - 2024-11-17
 ### Added
 - Portfolio detail page with dynamic routing (`/portfolio/:slug`)

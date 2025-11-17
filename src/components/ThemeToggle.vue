@@ -24,17 +24,17 @@ onMounted(() => {
 <style scoped lang="scss">
     .theme-toggle {
         background: none;
-        border: 1px solid var(--color-border);
-        border-radius: var(--border-radius-sm);
+        border: none;
         padding: var(--spacing-xs);
-        color: var(--color-text-primary);
+        color: var(--color-text-secondary);
         display: flex;
         align-items: center;
         justify-content: center;
         transition: border-color var(--transition-fast);
 
         &:hover {
-            border-color: var(--color-text-primary);
+          transform: rotate(35deg);
+          color: var(--color-text-primary);
         }
     }
 </style>

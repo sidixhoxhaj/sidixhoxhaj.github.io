@@ -26,10 +26,3 @@ const iconName = computed(() => {
   return currentTheme.value === 'dark' ? `${props.name}-light` : props.name;
 });
 </script>
-
-<style scoped lang="scss">
-    .icon {
-        display: block;
-        color: currentColor;
-    }
-</style>

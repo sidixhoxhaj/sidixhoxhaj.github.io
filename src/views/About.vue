@@ -1,11 +1,5 @@
 <template>
   <div class="page">
-    <header class="page-header">
-      <div class="container">
-        <ThemeToggle />
-      </div>
-    </header>
-
     <div v-if="!loading && about" class="page-content">
       <section class="hero-section">
         <div class="container">
@@ -177,7 +171,7 @@ const formatDate = (dateString) => {
       font-weight: var(--font-weight-thin);
       margin-bottom: var(--spacing-xl);
 
-      b {
+      :deep(b) {
         font-weight: var(--font-weight-bold);
         color: var(--color-text-primary);
       }

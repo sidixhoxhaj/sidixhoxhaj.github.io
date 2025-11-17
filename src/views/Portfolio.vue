@@ -1,24 +1,15 @@
 <template>
   <div class="page">
-    <!-- Header with Theme Toggle -->
-    <header class="page-header">
-      <div class="container">
-        <ThemeToggle />
-      </div>
-    </header>
-
     <div v-if="loading" class="loading-state">
       <div class="container">
         <p>Loading portfolio...</p>
       </div>
     </div>
-
     <div v-else-if="portfolio.length === 0" class="empty-state">
       <div class="container">
         <p>No portfolio items yet.</p>
       </div>
     </div>
-
     <div v-else class="page-content">
       <section class="portfolio-section">
         <div class="container">
@@ -40,7 +31,6 @@
 
 <script setup>
 import { computed } from 'vue';
-import ThemeToggle from '@/components/ThemeToggle.vue';
 import PortfolioCard from '@/components/PortfolioCard.vue';
 import { usePortfolio } from '@/composables/usePortfolio';
 
