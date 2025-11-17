@@ -1,6 +1,5 @@
 <template>
   <div class="page">
-    <!-- Header with Theme Toggle -->
     <header class="page-header">
       <div class="container">
         <ThemeToggle />
@@ -8,17 +7,12 @@
     </header>
 
     <div v-if="!loading && about" class="page-content">
-      <!-- Hero Section -->
       <section class="hero-section">
         <div class="container">
           <div class="hero-grid">
             <div class="hero-text">
-              <h1 class="hero-intro">
-                Senior Frontend Developer
-              </h1>
-              <h3 class="hero-bio">
-                Specializing in <b>Vue.js</b>, <b>React.js</b>, and building <b>design systems</b> for high-traffic platforms. Proven track record of delivering measurable business impact.
-              </h3>
+              <h1 class="hero-intro">{{ about.title }}</h1>
+              <div class="hero-bio" v-html="about.intro"></div>
               <div class="hero-actions">
                 <a
                   v-for="link in about.socialLinks"
@@ -42,8 +36,6 @@
           </div>
         </div>
       </section>
-
-      <!-- Experience Section -->
       <section v-if="about.experiences?.length" class="experience-section">
         <div class="container">
           <h2 class="heading-xl mb-2xl">My <strong>Experience</strong></h2>
@@ -59,13 +51,11 @@
                   {{ formatDate(exp.startDate) }} - {{ exp.endDate ? formatDate(exp.endDate) : 'Present' }}
                 </span>
               </div>
-              <p class="text-body experience-description">{{ exp.responsibilities }}</p>
+              <div class="text-body experience-description" v-html="exp.responsibilities"></div>
             </article>
           </div>
         </div>
       </section>
-
-      <!-- Skills Section -->
       <section v-if="about.skills?.length" class="skills-section">
         <div class="container">
           <h2 class="heading-xl mb-2xl">My <strong>Skills</strong></h2>

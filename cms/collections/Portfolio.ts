@@ -70,17 +70,6 @@ export const Portfolio: CollectionConfig = {
       ],
     },
     {
-      name: 'highlights',
-      type: 'array',
-      fields: [
-        {
-          name: 'achievement',
-          type: 'text',
-          required: true,
-        },
-      ],
-    },
-    {
       name: 'liveUrl',
       type: 'text',
       admin: {

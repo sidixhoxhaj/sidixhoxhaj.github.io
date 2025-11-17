@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 // Helper to convert Lexical richText to plain text
 const lexicalToPlainText = (lexicalData: any): string => {
   if (!lexicalData || !lexicalData.root) return '';
-  
+
   const extractText = (node: any): string => {
     if (node.type === 'text') return node.text || '';
     if (node.children) {
@@ -18,8 +18,51 @@ const lexicalToPlainText = (lexicalData: any): string => {
     }
     return '';
   };
-  
+
   return lexicalData.root.children?.map(extractText).join('\n') || '';
+};
+
+// Helper to convert Lexical richText to HTML
+const lexicalToHTML = (lexicalData: any): string => {
+  if (!lexicalData || !lexicalData.root) return '';
+
+  const nodeToHTML = (node: any): string => {
+    if (node.type === 'text') {
+      let text = node.text || '';
+      if (node.format) {
+        if (node.format & 1) text = `<b>${text}</b>`; // bold
+        if (node.format & 2) text = `<em>${text}</em>`; // italic
+        if (node.format & 4) text = `<u>${text}</u>`; // underline
+        if (node.format & 8) text = `<code>${text}</code>`; // code
+      }
+      return text;
+    }
+
+    if (!node.children) return '';
+
+    const childrenHTML = node.children.map(nodeToHTML).join('');
+
+    switch (node.type) {
+      case 'paragraph':
+        return `<p>${childrenHTML}</p>`;
+      case 'heading':
+        const level = node.tag || 'h2';
+        return `<${level}>${childrenHTML}</${level}>`;
+      case 'list':
+        const listTag = node.listType === 'number' ? 'ol' : 'ul';
+        return `<${listTag}>${childrenHTML}</${listTag}>`;
+      case 'listitem':
+        return `<li>${childrenHTML}</li>`;
+      case 'quote':
+        return `<blockquote>${childrenHTML}</blockquote>`;
+      case 'link':
+        return `<a href="${node.url}" target="${node.newTab ? '_blank' : '_self'}" rel="${node.newTab ? 'noopener noreferrer' : ''}">${childrenHTML}</a>`;
+      default:
+        return childrenHTML;
+    }
+  };
+
+  return lexicalData.root.children?.map(nodeToHTML).join('') || '';
 };
 
 const exportData = async () => {
@@ -44,14 +87,15 @@ const exportData = async () => {
 
     // Transform the data for Vue app consumption
     const transformedData = {
-      bio: lexicalToPlainText(aboutData.bio),
+      title: aboutData.position,
+      intro: lexicalToHTML(aboutData.intro),
       socialLinks: aboutData.socialLinks || [],
       experiences: (aboutData.experiences || []).map((exp: any) => ({
         company: exp.company,
         position: exp.position,
         startDate: exp.startDate,
         endDate: exp.endDate,
-        responsibilities: lexicalToPlainText(exp.responsibilities),
+        responsibilities: lexicalToHTML(exp.responsibilities),
       })),
       skills: aboutData.skills || [],
     };
@@ -110,16 +154,18 @@ const exportData = async () => {
         title: item.title,
         slug: item.slug,
         description: item.description,
-        content: lexicalToPlainText(item.content),
+        content: lexicalToHTML(item.content),
         mainImage: copyMediaFile(mainImageUrl),
-        galleryImages: (item.galleryImages || []).map((img: any) => {
+        gallery: (item.galleryImages || []).map((img: any) => {
           const imgUrl = typeof img.image === 'object' ? img.image?.url : img.image;
-          return copyMediaFile(imgUrl);
+          const url = copyMediaFile(imgUrl);
+          return url ? { url, alt: '' } : null;
         }).filter(Boolean),
         technologies: (item.technologies || []).map((t: any) => t.tech),
         highlights: (item.highlights || []).map((h: any) => h.achievement),
         liveUrl: item.liveUrl,
         githubUrl: item.githubUrl,
+        order: item.order || 0,
       };
     });
 

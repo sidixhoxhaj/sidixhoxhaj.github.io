@@ -8,13 +8,13 @@
       <h3 class="portfolio-card__title">{{ item.title }}</h3>
       <p class="portfolio-card__description">{{ item.description }}</p>
       <div class="portfolio-card__links">
-        <a
-          href="#"
-          target="_self"
+        <router-link
+          v-if="item.slug"
+          :to="`/portfolio/${item.slug}`"
           class="btn btn--small"
           >
           View Project
-        </a>
+        </router-link>
         <a
           v-if="item.liveUrl"
           :href="item.liveUrl"
@@ -22,7 +22,7 @@
           rel="noopener noreferrer"
           class="btn btn--small"
         >
-          <Icon name="react" :width="16" :height="16" />
+          <Icon name="external-link" :width="16" :height="16" />
           Website
         </a>
         <a
@@ -91,10 +91,10 @@ const formattedNumber = computed(() => {
 
     &__image {
       width: 100%;
+      max-height: 300px;
       aspect-ratio: 16 / 10;
       border-radius: var(--border-radius-lg);
       overflow: hidden;
-      border-bottom: 3px solid var(--color-text-primary);
       background: var(--color-bg-secondary);
 
       img {

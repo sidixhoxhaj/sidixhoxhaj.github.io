@@ -7,6 +7,16 @@ export const About: GlobalConfig = {
   },
   fields: [
     {
+      name: 'position',
+      type: 'text',
+      required: true
+    },
+    {
+      name: 'intro',
+      type: 'richText',
+      required: true
+    },
+    {
       name: 'socialLinks',
       type: 'array',
       fields: [
@@ -28,8 +38,7 @@ export const About: GlobalConfig = {
         {
           name: 'showLabel',
           type: 'checkbox',
-          required: true,
-          defaultValue: false,
+          required: false
         }
       ],
     },

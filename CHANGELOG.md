@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2024-11-17
+### Added
+- Portfolio detail page with dynamic routing (`/portfolio/:slug`)
+- Rich text content rendering with HTML support
+- Image gallery component for portfolio items
+- SEO meta tags for portfolio detail pages using @vueuse/head
+  - Open Graph meta tags for social sharing
+  - Dynamic page titles and descriptions
+- 404 handling for invalid portfolio slugs
+- Navigation link from portfolio card to detail page
+- Back to Portfolio navigation link
+- Technology tags display
+- Key highlights/achievements list with custom styling
+- Arrow-left and external-link icons
+- Order field in Portfolio CMS collection for custom sorting
+
 ## [0.4.0] - 2024-11-14
 ### Added
 - Portfolio CMS collection with comprehensive fields
