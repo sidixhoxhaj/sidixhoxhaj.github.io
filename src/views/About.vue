@@ -46,21 +46,13 @@
                 </span>
               </div>
               <div class="text-body experience-description" v-html="exp.responsibilities"></div>
+              <div v-if="exp.skills?.length" class="experience-skills">
+                <div v-for="skill in exp.skills" :key="skill.icon" class="experience-skill-item">
+                  <Icon :name="skill.icon" />
+                  <span class="experience-skill-tooltip">{{ skill.name }}</span>
+                </div>
+              </div>
             </article>
-          </div>
-        </div>
-      </section>
-      <section v-if="about.skills?.length" class="skills-section">
-        <div class="container">
-          <h2 class="heading-xl mb-2xl">My <strong>Skills</strong></h2>
-          <div class="skills-grid grid grid-12">
-            <div
-              v-for="skill in about.skills"
-              :key="skill.id"
-              class="skills-item"
-            >
-              <Icon :name="skill.icon" />
-            </div>
           </div>
         </div>
       </section>
@@ -85,6 +77,7 @@ const formatDate = (dateString) => {
 <style lang="scss" scoped>
   @use '@/styles/tokens.scss';
   @use '@/styles/utils.scss';
+
 
   .page-header {
     padding: var(--spacing-lg) 0;
@@ -167,9 +160,11 @@ const formatDate = (dateString) => {
     }
 
     &-bio {
-      color: var(--color-text-secondary);
-      font-weight: var(--font-weight-thin);
-      margin-bottom: var(--spacing-xl);
+      :deep(h3) {
+        color: var(--color-text-secondary);
+        font-weight: var(--font-weight-thin);
+        margin-bottom: var(--spacing-xl);
+      }
 
       :deep(b) {
         font-weight: var(--font-weight-bold);
@@ -217,7 +212,7 @@ const formatDate = (dateString) => {
     &-list {
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-2xl);
+      gap: var(--spacing-3xl);
     }
 
     &-header {
@@ -242,7 +237,7 @@ const formatDate = (dateString) => {
       }
 
       span {
-        font-weight: var(--font-weight-regular);
+        font-weight: var(--font-weight-thin);
       }
     }
 
@@ -250,30 +245,54 @@ const formatDate = (dateString) => {
       font-size: var(--font-size-sm);
       white-space: nowrap;
     }
-  }
 
-  .skills {
-    &-grid {
+    &-skills {
+      display: flex;
+      flex-wrap: wrap;
       gap: var(--spacing-md);
+      margin-top: var(--spacing-xs);
     }
-    
-    &-item {
+
+    &-skill-item {
+      position: relative;
+      width: var(--skill-icon-size);
+      height: var(--skill-icon-size);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all var(--transition-fast);
+      transition: transform var(--transition-fast);
 
       &:hover {
-        border-color: var(--color-text-primary);
         transform: translateY(-4px);
+
+        .experience-skill-tooltip {
+          opacity: 1;
+          pointer-events: none;
+        }
       }
 
       :deep(svg) {
         width: 100%;
         height: 100%;
-        max-width: 40px;
-        max-height: 40px;
+        max-width: var(--skill-icon-size);
+        max-height: var(--skill-icon-size);
       }
+    }
+
+    &-skill-tooltip {
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-text-primary);
+      color: var(--color-text-inverse);
+      font-size: var(--font-size-xs);
+      white-space: nowrap;
+      padding: 4px 8px;
+      border-radius: var(--border-radius-sm);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      pointer-events: none;
     }
   }
 

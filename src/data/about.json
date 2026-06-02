@@ -1,6 +1,6 @@
 {
-  "title": "Senior Frontend Developer",
-  "intro": "<h3>Specializing in <b>Vue.js</b>, <b>React.js</b>, and building <b>design systems</b> for high-traffic platforms. Proven track record of delivering measurable business impact.</h3>",
+  "title": "Hi, I'm Sidi",
+  "intro": "<h3>Senior developer specializing in <b>Vue.js</b>, <b>React.js</b>, and <b>design systems</b> — with a track record of shipping work that drives <b>measurable results</b>.</h3>",
   "socialLinks": [
     {
       "id": "691b1a8f42b1105750b66356",
@@ -26,144 +26,313 @@
   ],
   "experiences": [
     {
+      "company": "Nmbrs BV",
+      "position": "Frontend Growth Engineer",
+      "startDate": "2026-02-01T12:00:00.000Z",
+      "endDate": null,
+      "responsibilities": "<p>Working at a B2B payroll platform serving 800K+ users. Developing and  implementing A/B experiments, building design system components, tracking  analytics, and creating custom AI solutions for a multidisciplinary growth team.</p>",
+      "skills": [
+        {
+          "icon": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "icon": "typescript",
+          "name": "TypeScript"
+        },
+        {
+          "icon": "vuejs",
+          "name": "Vue.js"
+        },
+        {
+          "icon": "react",
+          "name": "React.js"
+        },
+        {
+          "icon": "nextjs",
+          "name": "Next.js"
+        },
+        {
+          "icon": "git",
+          "name": "Git"
+        },
+        {
+          "icon": "figma",
+          "name": "Figma"
+        },
+        {
+          "icon": "html5",
+          "name": "HTML5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS3"
+        },
+        {
+          "icon": "saas",
+          "name": "Scss"
+        },
+        {
+          "icon": "playwright",
+          "name": "Playwright"
+        },
+        {
+          "icon": "google-tag-manager",
+          "name": "Google Tag Manager"
+        },
+        {
+          "icon": "adobe-illustrator",
+          "name": "Adobe Illustrator"
+        },
+        {
+          "icon": "adobe-photoshop",
+          "name": "Adobe Photoshop"
+        }
+      ]
+    },
+    {
       "company": "BookerZzz BV",
       "position": "Senior Frontend Developer",
       "startDate": "2021-11-01T12:00:00.000Z",
-      "endDate": null,
-      "responsibilities": "<p>Working on a multi-country booking platform serving 5M+ monthly users across 8 European markets. Led initiatives including design system development across 4 platforms, frontend architecture for major projects (20% margin increase), and A/B testing programs that improved conversions by 13%.</p>"
+      "endDate": "2026-01-31T12:00:00.000Z",
+      "responsibilities": "<p>Working on a multi-country booking platform serving 5M+ monthly users across 8 European markets. Led initiatives including design system development across 4 platforms, frontend architecture for major projects (20% margin increase), and A/B testing programs that improved conversions by 13%.</p>",
+      "skills": [
+        {
+          "icon": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "icon": "typescript",
+          "name": "TypeScript"
+        },
+        {
+          "icon": "vuejs",
+          "name": "Vue.js"
+        },
+        {
+          "icon": "react",
+          "name": "React.js"
+        },
+        {
+          "icon": "nextjs",
+          "name": "Next.js"
+        },
+        {
+          "icon": "git",
+          "name": "Git"
+        },
+        {
+          "icon": "figma",
+          "name": "Figma"
+        },
+        {
+          "icon": "jquery",
+          "name": "jQuery"
+        },
+        {
+          "icon": "html5",
+          "name": "HTML5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS3"
+        },
+        {
+          "icon": "tailwind",
+          "name": "Tailwind"
+        },
+        {
+          "icon": "saas",
+          "name": "Scss"
+        },
+        {
+          "icon": "supabase",
+          "name": "Supabase"
+        },
+        {
+          "icon": "playwright",
+          "name": "Playwright"
+        },
+        {
+          "icon": "jest",
+          "name": "Jest"
+        },
+        {
+          "icon": "google-tag-manager",
+          "name": "Google Tag Manager"
+        }
+      ]
     },
     {
       "company": "Ritech International AG",
       "position": "Frontend Developer",
       "startDate": "2021-03-01T12:00:00.000Z",
       "endDate": "2021-11-01T12:00:00.000Z",
-      "responsibilities": "<p></p><p>Building e-commerce solutions for US clients, including a $4M+ education platform and fashion e-commerce with 1M+ users. Specialized in Shopify Plus development, custom React applications, and integrating automated workflows using Zapier, Klaviyo, and third-party APIs.</p>"
+      "responsibilities": "<p></p><p>Building e-commerce solutions for US clients, including a $4M+ education platform and fashion e-commerce with 1M+ users. Specialized in Shopify Plus development, custom React applications, and integrating automated workflows using Zapier, Klaviyo, and third-party APIs.</p>",
+      "skills": [
+        {
+          "icon": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "icon": "react",
+          "name": "React.js"
+        },
+        {
+          "icon": "figma",
+          "name": "Figma"
+        },
+        {
+          "icon": "git",
+          "name": "Git"
+        },
+        {
+          "icon": "jquery",
+          "name": "jQuery"
+        },
+        {
+          "icon": "html5",
+          "name": "HTML5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS3"
+        },
+        {
+          "icon": "saas",
+          "name": "Scss"
+        },
+        {
+          "icon": "jest",
+          "name": "Jest"
+        },
+        {
+          "icon": "shopify",
+          "name": "Shopify+"
+        },
+        {
+          "icon": "adobe-illustrator",
+          "name": "Adobe Illustrator"
+        },
+        {
+          "icon": "adobe-photoshop",
+          "name": "Adobe Photoshop"
+        }
+      ]
     },
     {
       "company": "Optima Italia SARL",
       "position": "Frontend Developer",
       "startDate": "2018-10-01T12:00:00.000Z",
       "endDate": "2021-03-01T12:00:00.000Z",
-      "responsibilities": "<p>Building web platforms for a major telecom and energy company with 600K+ monthly users. Created a design system with 40+ components and design tokens that became the company-wide standard for React.js development across CRM dashboards and microservices.</p>"
+      "responsibilities": "<p>Building web platforms for a major telecom and energy company with 600K+ monthly users. Created a design system with 40+ components and design tokens that became the company-wide standard for React.js development across CRM dashboards and microservices.</p>",
+      "skills": [
+        {
+          "icon": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "icon": "react",
+          "name": "React.js"
+        },
+        {
+          "icon": "git",
+          "name": "Git"
+        },
+        {
+          "icon": "figma",
+          "name": "Figma"
+        },
+        {
+          "icon": "html5",
+          "name": "HTML5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS3"
+        },
+        {
+          "icon": "jquery",
+          "name": "jQuery"
+        },
+        {
+          "icon": "saas",
+          "name": "Scss"
+        },
+        {
+          "icon": "firebase",
+          "name": "Firebase"
+        },
+        {
+          "icon": "wordpress",
+          "name": "Wordpress"
+        },
+        {
+          "icon": "woo-commerce",
+          "name": "WooCommerce"
+        },
+        {
+          "icon": "adobe-illustrator",
+          "name": "Adobe Illustrator"
+        },
+        {
+          "icon": "adobe-photoshop",
+          "name": "Adobe Photoshop"
+        },
+        {
+          "icon": "jest",
+          "name": "Jest"
+        },
+        {
+          "icon": "shopify",
+          "name": "Shopify+"
+        }
+      ]
     },
     {
       "company": "MEDIAWeb Group",
       "position": "Frontend Developer",
       "startDate": "2016-10-01T12:00:00.000Z",
       "endDate": "2018-10-01T12:00:00.000Z",
-      "responsibilities": "<p>Building custom websites for clients across Albania and Switzerland. Built 50+ websites using WordPress, PrestaShop, and Shopify, including a year-long Chamber of Commerce project, and was promoted to team lead managing 4 developers in final months.</p>"
-    }
-  ],
-  "skills": [
-    {
-      "id": "691b1bbc49c5c3ecf8111582",
-      "name": "JavaScript",
-      "icon": "javascript"
-    },
-    {
-      "id": "691b1bc849c5c3ecf8111584",
-      "name": "TypeScript",
-      "icon": "typescript"
-    },
-    {
-      "id": "691b1bcf49c5c3ecf8111586",
-      "name": "Vue.js",
-      "icon": "vuejs"
-    },
-    {
-      "id": "691b1be049c5c3ecf8111588",
-      "name": "React.js",
-      "icon": "react"
-    },
-    {
-      "id": "691b1bea49c5c3ecf811158a",
-      "name": "Next.js",
-      "icon": "nextjs"
-    },
-    {
-      "id": "691b1bf249c5c3ecf811158c",
-      "name": "Git",
-      "icon": "git"
-    },
-    {
-      "id": "691b1c6d49c5c3ecf81115ac",
-      "name": "Figma",
-      "icon": "figma"
-    },
-    {
-      "id": "691b1bf749c5c3ecf811158e",
-      "name": "jQuery",
-      "icon": "jquery"
-    },
-    {
-      "id": "691b1c0049c5c3ecf8111590",
-      "name": "HTML5",
-      "icon": "html5"
-    },
-    {
-      "id": "691b1c0749c5c3ecf8111592",
-      "name": "CSS3",
-      "icon": "css3"
-    },
-    {
-      "id": "691b1c0c49c5c3ecf8111594",
-      "name": "Tailwind",
-      "icon": "tailwind"
-    },
-    {
-      "id": "691b1c1349c5c3ecf8111596",
-      "name": "Scss",
-      "icon": "saas"
-    },
-    {
-      "id": "691b1c1d49c5c3ecf8111598",
-      "name": "Supabase",
-      "icon": "supabase"
-    },
-    {
-      "id": "691b1c2349c5c3ecf811159a",
-      "name": "Firebase",
-      "icon": "firebase"
-    },
-    {
-      "id": "691b1c2c49c5c3ecf811159c",
-      "name": "Playwright",
-      "icon": "playwright"
-    },
-    {
-      "id": "691b1c3349c5c3ecf811159e",
-      "name": "Jest",
-      "icon": "jest"
-    },
-    {
-      "id": "691b1c3749c5c3ecf81115a0",
-      "name": "Google Tag Manager",
-      "icon": "google-tag-manager"
-    },
-    {
-      "id": "691b1c4049c5c3ecf81115a2",
-      "name": "Shopify+",
-      "icon": "shopify"
-    },
-    {
-      "id": "691b1c4849c5c3ecf81115a4",
-      "name": "Wordpress",
-      "icon": "wordpress"
-    },
-    {
-      "id": "691b1c4f49c5c3ecf81115a6",
-      "name": "WooCommerce",
-      "icon": "woo-commerce"
-    },
-    {
-      "id": "691b1c5749c5c3ecf81115a8",
-      "name": "Adobe Illustrator",
-      "icon": "adobe-illustrator"
-    },
-    {
-      "id": "691b1c6349c5c3ecf81115aa",
-      "name": "Adobe Photoshop",
-      "icon": "adobe-photoshop"
+      "responsibilities": "<p>Building custom websites for clients across Albania and Switzerland. Built 50+ websites using WordPress, PrestaShop, and Shopify, including a year-long Chamber of Commerce project, and was promoted to team lead managing 4 developers in final months.</p>",
+      "skills": [
+        {
+          "icon": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "icon": "jquery",
+          "name": "jQuery"
+        },
+        {
+          "icon": "html5",
+          "name": "HTML5"
+        },
+        {
+          "icon": "css3",
+          "name": "CSS3"
+        },
+        {
+          "icon": "git",
+          "name": "Git"
+        },
+        {
+          "icon": "wordpress",
+          "name": "Wordpress"
+        },
+        {
+          "icon": "woo-commerce",
+          "name": "WooCommerce"
+        },
+        {
+          "icon": "adobe-illustrator",
+          "name": "Adobe Illustrator"
+        },
+        {
+          "icon": "adobe-photoshop",
+          "name": "Adobe Photoshop"
+        }
+      ]
     }
   ]
 }

@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { getPayload } from 'payload';
 import config from '../cms/payload.config.js';
+import { SKILLS } from '../cms/globals/About.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -96,8 +97,11 @@ const exportData = async () => {
         startDate: exp.startDate,
         endDate: exp.endDate,
         responsibilities: lexicalToHTML(exp.responsibilities),
+        skills: (exp.skills || []).map((icon: string) => ({
+          icon,
+          name: SKILLS.find((s) => s.value === icon)?.label || icon,
+        })),
       })),
-      skills: aboutData.skills || [],
     };
 
     fs.writeFileSync(

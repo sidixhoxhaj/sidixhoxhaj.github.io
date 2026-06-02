@@ -5,7 +5,7 @@
     @click="toggleTheme" 
     aria-label="Toggle theme"
   >
-    <Icon :name="currentTheme === 'light' ? 'sun' : 'moon'" />
+    <Icon :name="currentTheme === 'dark' ? 'sun' : 'moon'" />
   </button>
 </template>
 
