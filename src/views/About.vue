@@ -61,7 +61,6 @@
 </template>
 
 <script setup>
-import ThemeToggle from '@/components/ThemeToggle.vue';
 import Icon from '@/components/Icon.vue';
 import { useAbout } from '@/composables/useAbout';
 
@@ -267,7 +266,6 @@ const formatDate = (dateString) => {
 
         .experience-skill-tooltip {
           opacity: 1;
-          pointer-events: none;
         }
       }
 
@@ -293,6 +291,7 @@ const formatDate = (dateString) => {
       opacity: 0;
       transition: opacity var(--transition-fast);
       pointer-events: none;
+      z-index: var(--z-index-dropdown);
     }
   }
 

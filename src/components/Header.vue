@@ -38,7 +38,7 @@
     right: 0;
     background: var(--color-bg-primary);
     border-bottom: 1px solid var(--color-border);
-    z-index: var(--z-header);
+    z-index: var(--z-index-header);
     transition: background-color var(--transition-base);
   }
 
