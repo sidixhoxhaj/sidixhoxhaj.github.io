@@ -1,0 +1,29 @@
+{
+  "name": "sidixhoxhaj-cms",
+  "version": "0.1.0",
+  "description": "Payload CMS for sidixhoxhaj.github.io",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "export": "tsx ../scripts/export-cms-data.ts"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "^3.85.0",
+    "@payloadcms/next": "^3.85.0",
+    "@payloadcms/richtext-lexical": "^3.85.0",
+    "next": "^16.2.7",
+    "payload": "^3.85.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.5",
+    "tsx": "^4.20.6",
+    "typescript": "^5.8.3"
+  }
+}

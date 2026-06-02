@@ -88,7 +88,7 @@ const exportData = async () => {
 
     // Transform the data for Vue app consumption
     const transformedData = {
-      title: aboutData.position,
+      title: aboutData.headline,
       intro: lexicalToHTML(aboutData.intro),
       socialLinks: aboutData.socialLinks || [],
       experiences: (aboutData.experiences || []).map((exp: any) => ({

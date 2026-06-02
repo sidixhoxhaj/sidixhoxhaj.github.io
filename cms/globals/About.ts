@@ -32,7 +32,7 @@ export const About: GlobalConfig = {
   },
   fields: [
     {
-      name: 'position',
+      name: 'headline',
       type: 'text',
       required: true
     },
