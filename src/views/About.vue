@@ -205,8 +205,6 @@ const formatDate = (dateString) => {
     max-width: 300px;
     max-height: 300px;
     aspect-ratio: 1;
-    border-radius: var(--border-radius-lg);
-    border-bottom: 3px solid var(--color-text-primary);
 
     img {
       width: auto;
